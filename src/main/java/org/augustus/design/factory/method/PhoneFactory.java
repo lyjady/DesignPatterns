@@ -6,7 +6,7 @@ import org.augustus.design.factory.entry.Phone;
  * @author LinYongJin
  * @date 2020/6/5 17:23
  */
-public interface PhoneFactory {
+public abstract class PhoneFactory {
 
-    Phone production();
+    public abstract Phone production();
 }

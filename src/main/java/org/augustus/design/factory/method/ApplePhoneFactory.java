@@ -7,7 +7,7 @@ import org.augustus.design.factory.entry.Phone;
  * @author LinYongJin
  * @date 2020/6/5 17:24
  */
-public class ApplePhoneFactory implements PhoneFactory{
+public class ApplePhoneFactory extends PhoneFactory{
 
     @Override
     public Phone production() {
