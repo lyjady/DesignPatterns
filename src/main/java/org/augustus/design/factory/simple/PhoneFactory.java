@@ -1,6 +1,5 @@
 package org.augustus.design.factory.simple;
 
-import com.sun.org.apache.xpath.internal.objects.XNull;
 import org.augustus.design.factory.entry.ApplePhone;
 import org.augustus.design.factory.entry.Phone;
 import org.augustus.design.factory.entry.SamsungPhone;
