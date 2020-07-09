@@ -12,6 +12,6 @@ public class TeachDaoImpl implements ITeachDao {
 
     @Override
     public String say(String name) {
-        return "say" + name;
+        return "say " + name;
     }
 }
