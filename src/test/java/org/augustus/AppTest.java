@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -14,13 +15,15 @@ import javax.script.ScriptException;
 public class AppTest {
 
     @Test
-    public void shouldAnswerWithTrue() throws ScriptException {
+    public void shouldAnswerWithTrue() throws ScriptException, NoSuchMethodException {
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine jsScript = manager.getEngineByName("JavaScript");
-        String scriptText = "var a = 1;" +
+        String scriptText = " function add() { var a = 1;" +
                 "var b = 2;" +
-                "var c = a + b;";
+                "var c = a + b;" +
+                "return c;}";
         jsScript.eval(scriptText);
-        System.out.println(jsScript.get("c"));
+        Object eval = ((Invocable) jsScript).invokeFunction("add");
+        System.out.println(eval);
     }
 }
